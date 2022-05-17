@@ -1,4 +1,4 @@
-# codesandbox-nuxt
+# YasuButaGames.xyz
 
 > Nuxt starter for CodeSandBox (used for https://template.nuxtjs.org)
 
