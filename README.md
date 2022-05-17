@@ -1,3 +1,3 @@
 # YasuButaGames.xyz
 
-Created using Nuxtjs and [codesandbox.io](https://codesandbox.io/).
+Created using [Nuxtjs](https://nuxtjs.org/) and [codesandbox.io](https://codesandbox.io/).
