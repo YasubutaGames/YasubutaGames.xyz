@@ -59,17 +59,13 @@ ul {
   float: right;
   color: #be4156;
 }
-.issueArrow {
-  margin: -4.5px;
-  margin-left: 1px;
-}
 .issueDetails {
   background-color: #be4156;
   border-radius: 5px;
   padding: 2px 5px 2px 8px;
   margin-top: 5px;
 }
-.issueFloatRight {
+.issueFloat {
   float: right;
 }
 .severityGreen {
@@ -192,6 +188,15 @@ a:hover {
     margin-right: 0px;
     margin-top: 0px;
     width: 382px;
+  }
+}
+@media screen and (max-width: 394px) {
+  .issueFloat {
+    float: inherit;
+  }
+  .paragraphLessMargin {
+    margin: 5px;
+    text-decoration-line: none;
   }
 }
 </style>
@@ -368,14 +373,9 @@ a:hover {
           this.issues[0].version == this.logs[0].version
         "
       >
-        <i class="statusError bubble"
-          >. . . ISSUES FOUND
-          <span
-            v-if="moreIssueInfo != true"
-            class="issueArrow statusError moreData"
-            @click="showMoreIssueInfo()"
-          >
-            ➡
+        <i class="statusError bubble moreData" @click="showMoreIssueInfo()"
+          >. . . ISSUES FOUND<span v-if="moreIssueInfo != true">
+            - Click to Show
           </span></i
         >
       </span>
@@ -388,27 +388,27 @@ a:hover {
       <div v-for="issue of issues" :key="issue">
         <div class="issueDetails" v-if="issue.isActive == true">
           <p class="paragraphLessMargin">
-            Report Date: <span class="issueFloatRight">{{ issue.date }}</span>
+            Report Date: <span class="issueFloat">{{ issue.date }}</span>
           </p>
           <p class="paragraphLessMargin">
-            Type: <span class="issueFloatRight">{{ issue.type }}</span>
+            Type: <span class="issueFloat">{{ issue.type }}</span>
           </p>
           <p class="paragraphLessMargin">
             Severity:
-            <span v-if="issue.severity == 0" class="issueFloatRight"
+            <span v-if="issue.severity == 0" class="issueFloat"
               ><span class="severityGreen">Low</span>/Mid/High</span
             >
-            <span v-else-if="issue.severity == 1" class="issueFloatRight"
+            <span v-else-if="issue.severity == 1" class="issueFloat"
               >Low/<span class="severityYellow">Mid</span>/High</span
             >
-            <span v-else-if="issue.severity == 2" class="issueFloatRight"
+            <span v-else-if="issue.severity == 2" class="issueFloat"
               >Low/Mid/<span class="severityRed">High</span></span
             >
-            <span v-else class="issueFloatRight">Unknown Severity</span>
+            <span v-else class="issueFloat">Unknown Severity</span>
           </p>
           <p class="paragraphLessMargin">
             Description:
-            <span class="issueFloatRight">{{ issue.description }}</span>
+            <span class="issueFloat">{{ issue.description }}</span>
           </p>
         </div>
       </div>
