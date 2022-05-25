@@ -55,6 +55,39 @@ ul {
   float: right;
   color: #41be71;
 }
+.statusError {
+  float: right;
+  color: #be4156;
+}
+.issueArrow {
+  margin: -4.5px;
+  margin-left: 1px;
+}
+.issueDetails {
+  background-color: #be4156;
+  border-radius: 5px;
+  padding: 2px 5px 2px 8px;
+  margin-top: 5px;
+}
+.issueFloatRight {
+  float: right;
+}
+.severityGreen {
+  color: #46e282;
+  font-size: 20px;
+}
+.severityYellow {
+  color: #fae154;
+  font-size: 20px;
+}
+.severityRed {
+  color: #ff9090;
+  font-size: 20px;
+}
+.paragraphLessMargin {
+  margin: 5px;
+  text-decoration-line: underline;
+}
 .statusInProgress {
   float: right;
   color: #339659;
@@ -325,11 +358,61 @@ a:hover {
     </p>
 
     <div class="whitespaceSmall"></div>
-    <div class="content strong centeredText">Game Status</div>
+    <div id="Status" class="content strong centeredText">Game Status</div>
     <p>
       Standard Version, {{ this.logs[0].version }}.
-      <i class="statusComplete bubble">. . . NO ISSUES FOUND</i>
+
+      <span
+        v-if="
+          this.issues[0].isActive == true &&
+          this.issues[0].version == this.logs[0].version
+        "
+      >
+        <i class="statusError bubble"
+          >. . . ISSUES FOUND
+          <span
+            v-if="moreIssueInfo != true"
+            class="issueArrow statusError moreData"
+            @click="showMoreIssueInfo()"
+          >
+            ➡
+          </span></i
+        >
+      </span>
+      <span v-else>
+        <i class="statusComplete bubble">. . . NO ISSUES FOUND</i>
+      </span>
     </p>
+
+    <div v-if="moreIssueInfo == true">
+      <div v-for="issue of issues" :key="issue">
+        <div class="issueDetails" v-if="issue.isActive == true">
+          <p class="paragraphLessMargin">
+            Report Date: <span class="issueFloatRight">{{ issue.date }}</span>
+          </p>
+          <p class="paragraphLessMargin">
+            Type: <span class="issueFloatRight">{{ issue.type }}</span>
+          </p>
+          <p class="paragraphLessMargin">
+            Severity:
+            <span v-if="issue.severity == 0" class="issueFloatRight"
+              ><span class="severityGreen">Low</span>/Mid/High</span
+            >
+            <span v-else-if="issue.severity == 1" class="issueFloatRight"
+              >Low/<span class="severityYellow">Mid</span>/High</span
+            >
+            <span v-else-if="issue.severity == 2" class="issueFloatRight"
+              >Low/Mid/<span class="severityRed">High</span></span
+            >
+            <span v-else class="issueFloatRight">Unknown Severity</span>
+          </p>
+          <p class="paragraphLessMargin">
+            Description:
+            <span class="issueFloatRight">{{ issue.description }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="whitespaceSmall"></div>
     <p>
@@ -350,7 +433,7 @@ a:hover {
     <div>
       <p v-if="$fetchState.pending">Fetching Logs...</p>
       <p v-else-if="$fetchState.error">An error occurred :(</p>
-      <div v-else-if="more == false">
+      <div v-else-if="moreLogs == false">
         <div class="bubbleLong isRelative">
           {{ this.logs[0].title }} : {{ this.logs[0].version }}
           <p class="date isAbsolute">
@@ -370,7 +453,7 @@ a:hover {
         </ul>
         <div class="whitespaceSmall"></div>
 
-        <p class="centeredText moreData" @click="loadMore()">More</p>
+        <p class="centeredText moreData" @click="showMoreLogs()">More</p>
       </div>
       <div v-else>
         <div v-for="log of logs" :key="log">
@@ -416,9 +499,9 @@ a:hover {
       integration.
     </p>
     <p
-      v-if="moreInfo != true"
+      v-if="moreRoadmapInfoQ2 != true"
       class="centeredText moreData"
-      @click="showMore()"
+      @click="showMoreRoadmapInfoQ2()"
     >
       More
     </p>
@@ -445,9 +528,9 @@ a:hover {
       cap.
     </p>
     <p
-      v-if="moreInfo2 != true"
+      v-if="moreRoadmapInfoQ3 != true"
       class="centeredText moreData"
-      @click="showMore2()"
+      @click="showMoreRoadmapInfoQ3()"
     >
       More
     </p>
@@ -714,33 +797,44 @@ export default {
   data() {
     return {
       logs: [],
-      logsAll: [],
-      more: false,
-      moreInfo: false,
-      moreInfo2: false,
+      issues: [],
+      moreLogs: false,
+      moreRoadmapInfoQ2: false,
+      moreRoadmapInfoQ3: false,
+      moreIssueInfo: false,
     };
   },
   refresh() {
-    this.fetch.fetchData1();
+    this.fetch.fetchDataChangeLog();
+    this.fetch.fetchDataIssues();
   },
 
   async fetch() {
-    await this.fetchData1();
+    await this.fetchDataChangeLog();
+    await this.fetchDataIssues();
   },
   methods: {
-    async fetchData1() {
+    async fetchDataChangeLog() {
       this.logs = await fetch(
-        "https://raw.githubusercontent.com/YasubutaGames/TheViridianObeliskChangeLog/main/data.json"
+        "https://raw.githubusercontent.com/YasubutaGames/TheViridianObeliskData/main/ChangeLog.json"
       ).then((res) => res.json());
     },
-    loadMore() {
-      this.more = true;
+    async fetchDataIssues() {
+      this.issues = await fetch(
+        "https://raw.githubusercontent.com/YasubutaGames/TheViridianObeliskData/main/Issues.json"
+      ).then((res) => res.json());
     },
-    showMore(id) {
-      this.moreInfo = true;
+    showMoreLogs() {
+      this.moreLogs = true;
     },
-    showMore2(id) {
-      this.moreInfo2 = true;
+    showMoreRoadmapInfoQ2(id) {
+      this.moreRoadmapInfoQ2 = true;
+    },
+    showMoreRoadmapInfoQ3(id) {
+      this.moreRoadmapInfoQ3 = true;
+    },
+    showMoreIssueInfo(id) {
+      this.moreIssueInfo = true;
     },
   },
 };
