@@ -562,7 +562,18 @@ a:hover {
     <p class="centeredText"><i>-- Side Missions</i></p>
     <p>
       2022: Translation; Japanese.
-      <i class="statusNotYet bubble">. . . PAUSED</i>
+      <i class="statusInProgress bubble">. . . IN PROGRESS: 20%</i>
+    </p>
+    <p
+      v-if="moreTranslationInfo != true"
+      class="centeredText moreData"
+      @click="showMoreTranslationInfo()"
+    >
+      More
+    </p>
+    <p v-else>
+      Backend, fonts etc. has all been implemented. What's left now is the
+      translation itself. Making slow but steady progress.
     </p>
     <i>Note: Roadmap not final. Last update: {{ this.logs[0].date }}</i>
 
@@ -802,6 +813,7 @@ export default {
       moreRoadmapInfoQ2: false,
       moreRoadmapInfoQ3: false,
       moreIssueInfo: false,
+      moreTranslationInfo: false,
     };
   },
   refresh() {
@@ -835,6 +847,9 @@ export default {
     },
     showMoreIssueInfo(id) {
       this.moreIssueInfo = true;
+    },
+    showMoreTranslationInfo(id) {
+      this.moreTranslationInfo = true;
     },
   },
 };
