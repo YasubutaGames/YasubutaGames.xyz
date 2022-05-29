@@ -64,6 +64,7 @@ ul {
   border-radius: 5px;
   padding: 2px 5px 2px 8px;
   margin-top: 5px;
+  overflow: auto;
 }
 .issueFloat {
   float: right;
