@@ -154,7 +154,8 @@ a:hover {
 }
 .titleGooglePlay {
   right: 0;
-  top: 3px;
+  top: -15px;
+  right: 35px;
 }
 .isRelative {
   position: relative;
@@ -222,17 +223,6 @@ a:hover {
             ></path></svg
         ></a>
       </div>
-    </div>
-
-    <p>
-      Welcome to our home! Below you'll find information about us and our
-      projects. Follow us on twitter for the latest updates & information.
-    </p>
-
-    <div class="whitespaceBig"></div>
-
-    <div class="content strong centeredText isRelative">
-      The Viridian Obelisk
       <div class="svg titleGooglePlay">
         <a
           href="https://play.google.com/store/apps/details?id=com.YasubutaGames.TheViridianObelisk"
@@ -250,6 +240,18 @@ a:hover {
             ></path></svg
         ></a>
       </div>
+    </div>
+
+    <p>
+      Welcome to our home! Below you'll find information about us and our
+      project; The Viridan Obelisk. Get it now, on Google Play. Follow us on
+      twitter for the latest updates & information.
+    </p>
+
+    <div class="whitespaceBig"></div>
+
+    <div class="content strong centeredText isRelative">
+      <img class="image" src="/titleImage.png" alt="The Viridian Obelisk" />
     </div>
 
     <p class="centeredText">
@@ -271,7 +273,7 @@ a:hover {
       of your quest; the Viridian Obelisk.
     </p>
     <p class="centeredText">
-      <i>Lore & Story</i>
+      <i>Lore & Story Synopsis</i>
     </p>
     <p>
       As the world is thrown into chaos and hope fades, adventurers gather to
@@ -421,7 +423,9 @@ a:hover {
       <i class="statusComplete bubble">. . . NO ISSUES FOUND</i>
     </p>
     <p>
-      <a class="floatRight" href="mailto: yasubutagames@gmail.com"
+      <a
+        class="floatRight"
+        href="mailto: yasubutagames@gmail.com?subject=The Viridian Obelisk: Issue"
         >Report Issue</a
       >
     </p>
