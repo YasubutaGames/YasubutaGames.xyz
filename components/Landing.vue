@@ -519,7 +519,7 @@ a:hover {
       This may however be delayed to a later phase, in favor of new content.
     </p>
     <div class="isRelative hasHeight">
-      <i class="statusInProgress bubble">. . . IN PROGRESS: 96%</i>
+      <i class="statusInProgress bubble">. . . IN PROGRESS: 97%</i>
       <img
         class="smolArrow isAbsolute smolArrowPosition"
         src="/smolArrowInProgress.png"
