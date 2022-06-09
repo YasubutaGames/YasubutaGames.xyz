@@ -258,15 +258,19 @@ a:hover {
       <i>Quick Introduction</i>
     </p>
     <p>
-      The Viridian Obelisk is a Semi-Idle, Side-Scroller, RPG. As such, your
-      character may battle on their own. However, with your oversight and input,
-      your capabilities will significantly increase.
+      The Viridian Obelisk is a Pixel Art, Side Scroller, Semi Idle RPG. As
+      such, your character may battle on their own. However, with your oversight
+      and input, your capabilities will significantly increase.
     </p>
     <p>
-      You'll start out weak & fragile, but by grinding & sheer will you'll
-      slowly but surely grow stronger and stronger. You'll battle through
-      dungeons, bosses and timed challenge levels. You'll find rare items, learn
-      powerful spells, and empower your character.
+      The game is playable offline, contains no ads, microtransactions or other
+      immersion breaking elements.
+    </p>
+    <p>
+      You'll start out weak & fragile. By grinding & sheer will you'll slowly
+      but surely grow stronger and stronger. You'll battle through dungeons,
+      bosses and timed challenge levels. You'll find rare items, learn powerful
+      spells, and sculpt your character into a mighty hero.
     </p>
     <p>
       Should you persevere, you'll reach the object of your obsession, the end
@@ -283,22 +287,23 @@ a:hover {
       A perpetual war has been raging across the known lands. Three factions
       have struggled for supremacy.
     </p>
+    <p><i>Guild of the Grand Magus</i></p>
     <p>
-      The Guild of the Grand Magus; an archaic cult of mages, constantly in
-      search for novel ways to manipulate, harvest & utilize arcane energy. With
-      their intellect, wisdom & cunning, they seek to outsmart & outlast their
-      foes.
+      Archaic cult of mages, constantly in search for novel ways to manipulate,
+      harvest & utilize arcane energy. With their intellect, wisdom & cunning,
+      they seek to outsmart & outlast their foes.
     </p>
+    <p><i>Order of the Holy Blade</i></p>
     <p>
-      The Order of the Holy Blade; righteous zealots, whose ambitions are
-      overshadowed by none other. Through divine insight & ability, they face
-      any threat without fear. But, their brutal methods & fundamentalism
-      garners strong foes.
+      Righteous zealots, whose ambitions are overshadowed by none other. Through
+      divine insight & ability, they face any threat without fear. But, their
+      brutal methods & fundamentalism garners strong foes.
     </p>
+    <p><i>Clan of the Hollow Skull</i></p>
     <p>
-      The Clan of the Hollow Skull; once savage tribal communities, now united
-      under one creed. Its members value strength & might above all else. A
-      culture that spawns fierce, uncompromising warriors.
+      Once savage tribal communities, now united under one creed. Its members
+      value strength & might above all else. A culture that spawns fierce,
+      uncompromising warriors.
     </p>
     <p>
       At the height of turmoil, a faint rumor is heard; one of the Lost Obelisks
@@ -311,46 +316,43 @@ a:hover {
     <p>
       With the Viridian Obelisk, our main goal was to create a role-playing game
       with the focus on a relaxing and satisfying player experience. The game
-      plays in portrait mode, minimum oversight is required, progression is slow
-      but steady.
+      plays in portrait mode, can be paused at any time, tons of loot & lore,
+      progression is slow but steady.
     </p>
+
+    <p><i>Playstyles</i></p>
     <p>
-      The game contains no ads, microtransactions or other immersion breaking
-      elements.
-    </p>
-    <p>Another important focus for us is player choice.</p>
-    <p>
-      Firstly; playstyles. The game can be played in short bursts, or for a
-      prolonged amount of time, depending on what your prefer. Due to in-game
-      mechanics, your character will be stronger if you're paying attention and
-      doing everything you can to help your character advance.
+      The game can be played in short bursts, or for a prolonged amount of time,
+      depending on what your prefer. Due to in-game mechanics, your character
+      will be stronger if you're paying attention and doing everything you can
+      to help your character advance.
     </p>
     <p>
       However, you may also, for the most part, let the game play by itself.
-      When an obstacle that requires your input is presented, your device will
+      When an obstacle that requires your input is required, your device will
       notify you, allowing your to respond accordingly.
     </p>
     <p>
       Whichever style will allow your character to progress, albeit at different
       paces.
     </p>
+    <p><i>Character Customization</i></p>
     <p>
-      Secondly; character customization. Building you character is an important
-      part of the Viridian Obelisk. At creation you'll choose your faction
-      allegiance and heritage. These will impact how you're perceived and
-      treated in the game world.
+      Building you character is an important part of the Viridian Obelisk. At
+      creation you'll choose your faction allegiance and heritage. These will
+      impact how you're perceived and treated in the game world.
     </p>
     <p>
       Progressing through the game you'll choose your weapons, armor,
       accessories, spells & attributes. Upgrade and combine these to create
       powerful & versatile builds that fit your style of play.
     </p>
+    <p><i>Story & World Interaction</i></p>
     <p>
-      Thirdly; story & world interaction. The story is present, but not
-      obligatory. If you take the time to read conversations, in-game
-      discoveries etc., there's a narrative observable throughout the game.
-      We've built a cohesive fantasy world, with factions, characters, locations
-      and lore.
+      The story is present, but not obligatory. If you take the time to read
+      conversations, in-game discoveries etc., there's a narrative observable
+      throughout the game. We've built a cohesive fantasy world, with factions,
+      characters, locations and lore.
     </p>
     <p>
       But, we understand that's not something everyone wishes to partake in.
