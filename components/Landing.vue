@@ -11,6 +11,12 @@
   width: 100%;
   border-radius: 5px;
 }
+.titleImage {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 50px 0 50px;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: "pixelFont";
   src: url("/PIXELADE.TTF");
@@ -143,19 +149,21 @@ a:hover {
   color: #c4ceff;
 }
 .svg {
+  display: inline-block;
   width: 25px;
-  position: absolute;
   right: 0;
   top: 0;
 }
-.titleTwitter {
-  right: 0;
-  top: -15px;
+.svgWrapper {
+  margin: auto;
+  display: block;
+  text-align: center;
 }
-.titleGooglePlay {
-  right: 0;
-  top: -15px;
-  right: 35px;
+.titleText {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 .isRelative {
   position: relative;
@@ -205,41 +213,45 @@ a:hover {
 
 <template>
   <div class="background">
-    <div class="title isRelative">
-      Yasubuta Games<span class="smolText"> . x y z</span>
-      <div class="svg titleTwitter">
-        <a href="https://twitter.com/YasubutaGames"
-          ><svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            height="25px"
-            width="25px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-            ></path></svg
-        ></a>
+    <div class="title">
+      <div class="svgWrapper">
+        <div class="svg">
+          <a href="https://twitter.com/YasubutaGames"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="25px"
+              width="25px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              ></path></svg
+          ></a>
+        </div>
+        <div class="svg">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.YasubutaGames.TheViridianObelisk"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="25px"
+              width="25px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
+              ></path></svg
+          ></a>
+        </div>
       </div>
-      <div class="svg titleGooglePlay">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.YasubutaGames.TheViridianObelisk"
-          ><svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            height="25px"
-            width="25px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
-            ></path></svg
-        ></a>
-      </div>
+      <span class="titleText"
+        >Yasubuta Games<span class="smolText"> . x y z</span></span
+      >
     </div>
 
     <p>
@@ -251,7 +263,11 @@ a:hover {
     <div class="whitespaceBig"></div>
 
     <div class="content strong centeredText isRelative">
-      <img class="image" src="/titleImage.png" alt="The Viridian Obelisk" />
+      <img
+        class="titleImage"
+        src="/titleImage.png"
+        alt="The Viridian Obelisk"
+      />
     </div>
 
     <p class="centeredText">
@@ -421,7 +437,7 @@ a:hover {
 
     <div class="whitespaceSmall"></div>
     <p>
-      Trial Version, 0.127i.
+      Trial Version, 0.129i.
       <i class="statusComplete bubble">. . . NO ISSUES FOUND</i>
     </p>
     <p>
