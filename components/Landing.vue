@@ -216,7 +216,7 @@ a:hover {
     <div class="title">
       <div class="svgWrapper">
         <div class="svg">
-          <a href="https://twitter.com/YasubutaGames"
+          <a target="_blank" href="https://twitter.com/YasubutaGames"
             ><svg
               stroke="currentColor"
               fill="currentColor"
@@ -233,6 +233,7 @@ a:hover {
         </div>
         <div class="svg">
           <a
+            target="_blank"
             href="https://play.google.com/store/apps/details?id=com.YasubutaGames.TheViridianObelisk"
             ><svg
               stroke="currentColor"
@@ -246,6 +247,22 @@ a:hover {
               <path
                 d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
               ></path></svg
+          ></a>
+        </div>
+        <div class="svg">
+          <a target="_blank" href="https://discord.gg/hjXDvJ73ea"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="25px"
+              width="25px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z"
+              /></svg
           ></a>
         </div>
       </div>
@@ -521,26 +538,11 @@ a:hover {
       2022, Q2: Post-Release Improvements; Polish, bug-squashing, feedback
       integration.
     </p>
-    <p
-      v-if="moreRoadmapInfoQ2 != true"
-      class="centeredText moreData"
-      @click="showMoreRoadmapInfoQ2()"
-    >
-      More
-    </p>
-    <p v-else>
-      We still have a couple of things that we wish to accomplish in this phase.
-      We're currently working on adding unique music to boss fights, and
-      potentially to certain in-game events. We also want to create custom
-      animations for most, if not all, spells. Furthermore, player attack
-      animations is something we wish to add and improve upon in the future.
-      This may however be delayed to a later phase, in favor of new content.
-    </p>
     <div class="isRelative hasHeight">
-      <i class="statusInProgress bubble">. . . IN PROGRESS: 97%</i>
+      <i class="statusComplete bubble">. . . COMPLETE</i>
       <img
         class="smolArrow isAbsolute smolArrowPosition"
-        src="/smolArrowInProgress.png"
+        src="/smolArrowComplete.png"
       />
     </div>
 
@@ -550,6 +552,7 @@ a:hover {
       and for all. New Dungeons, Bosses, Items, Spells & Increased Level/Upgrade
       cap.
     </p>
+    <img class="image" alt="The Demonic Realm" src="/theDemonicRealm.png" />
     <p
       v-if="moreRoadmapInfoQ3 != true"
       class="centeredText moreData"
@@ -597,6 +600,26 @@ a:hover {
     <p v-else>
       Backend, fonts etc. has all been implemented. What's left now is the
       translation itself. Making slow but steady progress.
+    </p>
+
+    <div class="whitespaceSmall"></div>
+
+    <p>
+      2022: Feature; Speed up.
+      <i class="statusNotYet bubble">. . . NOT YET STARTED</i>
+    </p>
+    <p
+      v-if="moreSpeedUpInfo != true"
+      class="centeredText moreData"
+      @click="showMoreSpeedUpInfo()"
+    >
+      More
+    </p>
+    <p v-else>
+      We're investigating adding a Dungeon Speed Up feature. It would most
+      likely require a specific currency to utilize. Similar to how you
+      currently access the Challange Dungeons. This feature would only be
+      available for the main Progression Dungeons.
     </p>
     <i>Note: Roadmap not final. Last update: {{ this.logs[0].date }}</i>
 
@@ -763,6 +786,7 @@ a:hover {
     </p>
     <div class="whitespaceBig"></div>
     <a
+      target="_blank"
       href="https://play.google.com/store/apps/details?id=com.YasubutaGames.TheViridianObelisk"
       ><svg
         stroke="currentColor"
@@ -777,7 +801,7 @@ a:hover {
           d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
         ></path></svg
     ></a>
-    <a href="https://twitter.com/YasubutaGames"
+    <a target="_blank" href="https://twitter.com/YasubutaGames"
       ><svg
         stroke="currentColor"
         fill="currentColor"
@@ -791,7 +815,7 @@ a:hover {
           d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
         ></path></svg
     ></a>
-    <a href="https://github.com/YasubutaGames"
+    <a target="_blank" href="https://github.com/YasubutaGames"
       ><svg
         stroke="currentColor"
         fill="currentColor"
@@ -805,7 +829,7 @@ a:hover {
           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
         /></svg
     ></a>
-    <!-- <a href="#"
+    <a target="_blank" href="https://discord.gg/hjXDvJ73ea"
       ><svg
         stroke="currentColor"
         fill="currentColor"
@@ -818,7 +842,7 @@ a:hover {
         <path
           d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z"
         /></svg
-    ></a> -->
+    ></a>
     <div class="footer">
       © 2022 Yasubuta Games. All Rights Reserved. Font Credits: Pixelade by
       Astramat.
@@ -837,6 +861,7 @@ export default {
       moreRoadmapInfoQ3: false,
       moreIssueInfo: false,
       moreTranslationInfo: false,
+      moreSpeedUpInfo: false,
     };
   },
   refresh() {
@@ -873,6 +898,9 @@ export default {
     },
     showMoreTranslationInfo(id) {
       this.moreTranslationInfo = true;
+    },
+    showMoreSpeedUpInfo(id) {
+      this.moreSpeedUpInfo = true;
     },
   },
 };
